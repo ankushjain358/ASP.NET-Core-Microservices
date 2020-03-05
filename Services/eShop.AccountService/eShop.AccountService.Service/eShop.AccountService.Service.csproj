@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eShop.AccountService.DTO\eShop.AccountService.DTO.csproj" />
+    <ProjectReference Include="..\eShop.AccountService.Repository\eShop.AccountService.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

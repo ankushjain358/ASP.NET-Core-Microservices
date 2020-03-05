@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AccountService.Controllers
+namespace eShop.AccountService.API
 {
     [Route("api/[controller]")]
     [ApiController]
