@@ -36,3 +36,5 @@ namespace eShop.AccountService.API
 // 9. Middleware [Done]
 // 10. Filters [Done]
 // 11. Access Token [Pending]
+// 12. Swagger API Documentation
+// 13. 401 Error response for unauthorized requests. [Pending]

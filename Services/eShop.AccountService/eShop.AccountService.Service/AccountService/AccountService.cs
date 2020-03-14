@@ -28,5 +28,7 @@ namespace eShop.AccountService.Service
             _unitOfWork.UserRepository.Insert(userEntity);
             _unitOfWork.SaveChanges();
         }
+
+    
     }
 }

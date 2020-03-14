@@ -30,7 +30,15 @@ namespace eShop.AccountService.Repository
         {
             modelBuilder.Entity<Users>(entity =>
             {
+                entity.HasIndex(e => e.Email)
+                    .HasName("IX_Users")
+                    .IsUnique();
+
                 entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(100);
 
