@@ -8,7 +8,9 @@ namespace eShop.AccountService.Service
     {
         public DBToDomainProfile()
         {
-            CreateMap<Users, LoginResponseDTO>();
+            CreateMap<Users, LoginResponseDTO>()
+                .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.Id));
+
         }
     }
 }

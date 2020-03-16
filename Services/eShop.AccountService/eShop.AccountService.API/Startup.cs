@@ -89,7 +89,7 @@ namespace eShop.AccountService.API
                 app.UseHsts();
             }
 
-            //TODO: Allow only required origins using CORS
+            //Note: Allow only required origins using CORS
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseMiddleware(typeof(ErrorHandlingMiddleware));
             app.UseHttpsRedirection();

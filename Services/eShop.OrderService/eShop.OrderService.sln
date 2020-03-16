@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.OrderService", "OrderService\eShop.OrderService.csproj", "{19B63B1A-1A2B-41E3-8E87-3F5D80880218}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.OrderService.DTO", "eShop.OrderService.DTO\eShop.OrderService.DTO.csproj", "{D1295AC8-5434-4906-A1E9-9BDD13ACB937}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.OrderService.DTO", "eShop.OrderService.DTO\eShop.OrderService.DTO.csproj", "{D1295AC8-5434-4906-A1E9-9BDD13ACB937}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.OrderService.Repository", "eShop.OrderService.Repository\eShop.OrderService.Repository.csproj", "{487B7B26-6FDB-4F95-BAAC-3A42AB7B26FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.OrderService.Repository", "eShop.OrderService.Repository\eShop.OrderService.Repository.csproj", "{487B7B26-6FDB-4F95-BAAC-3A42AB7B26FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.OrderService.Service", "eShop.OrderService.Service\eShop.OrderService.Service.csproj", "{AC01175D-D8BC-4582-856B-FFC1390D7F94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.OrderService.Service", "eShop.OrderService.Service\eShop.OrderService.Service.csproj", "{AC01175D-D8BC-4582-856B-FFC1390D7F94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

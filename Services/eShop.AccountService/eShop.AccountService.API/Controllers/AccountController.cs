@@ -28,7 +28,7 @@ namespace eShop.AccountService.API.Controllers
             LoginResponseDTO response = _accountService.Login(request);
             if (response != null)
             {
-                response.AccessToken = new TokenGenerator(_configuration).GenerateJSONWebToken(response.Email);
+                response.AccessToken = new TokenGenerator(_configuration).GenerateJSONWebToken(response.UserId, response.Email);
                 return new ApiResponse<LoginResponseDTO>(response);
             }
             return new ApiResponse<LoginResponseDTO>("Login Failed", null, false);

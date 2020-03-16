@@ -1,5 +1,6 @@
 {
   "ReRoutes": [
+    //******* Start: Account Service ***********//
     {
       "DownstreamPathTemplate": "/api/account/login",
       "DownstreamScheme": "https",
@@ -23,7 +24,39 @@
       ],
       "UpstreamPathTemplate": "/api/account/register",
       "UpstreamHttpMethod": [ "Post" ]
+    },
+    //******* End: Account Service ***********//
+
+    //******* Start: Order Service ***********//
+    {
+      "DownstreamPathTemplate": "/api/order/get-orders",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44302
+        }
+      ],
+      "UpstreamPathTemplate": "/api/order/get-orders",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/order/create-recharge-order",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44302
+        }
+      ],
+      "UpstreamPathTemplate": "/api/order/create-recharge-order",
+      "UpstreamHttpMethod": [ "Post" ]
     }
+    //******* End: Order Service ***********//
+
+    //******* Start: Mobile Rechare Service ***********//
+
+    //******* End: Mobile Rechare Service ***********//
   ],
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:44300"

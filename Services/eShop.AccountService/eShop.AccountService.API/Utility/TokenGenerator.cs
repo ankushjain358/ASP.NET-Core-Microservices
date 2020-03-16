@@ -19,7 +19,7 @@ namespace eShop.AccountService.API
             _configuration = configuration;
         }
 
-        public string GenerateJSONWebToken(string email)
+        public string GenerateJSONWebToken(int userId, string email)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -27,6 +27,7 @@ namespace eShop.AccountService.API
             var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
               _configuration["Jwt:Issuer"],
               new List<Claim>() {
+                  new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
                   new Claim(ClaimTypes.Email, email),
                   new Claim(ClaimTypes.Name, email),
               },

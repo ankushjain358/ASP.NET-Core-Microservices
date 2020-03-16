@@ -6,5 +6,7 @@ namespace eShop.OrderService.DTO
 {
     public class RechargeOrderResponseDTO
     {
+        public int OrderId { get; set; }
+        public OrderStatus OrderStatus { get; set; }
     }
 }
