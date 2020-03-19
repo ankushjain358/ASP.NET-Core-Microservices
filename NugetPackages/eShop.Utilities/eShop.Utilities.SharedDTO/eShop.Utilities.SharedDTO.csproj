@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/ankushjain358/ASP.NET-Core-Microservices</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ankushjain358/ASP.NET-Core-Microservices</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Ankush Jain</Authors>
+    <Company>CoderJony</Company>
+    <Description>This package contains basic common DTO and Enum that will be used across the different projects.</Description>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.1.1</FileVersion>
+  </PropertyGroup>
+
+</Project>

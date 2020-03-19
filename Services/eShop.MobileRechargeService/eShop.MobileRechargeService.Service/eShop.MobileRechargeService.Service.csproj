@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\eShop.MobileRechargeService.DTO\eShop.MobileRechargeService.DTO.csproj" />
+    <ProjectReference Include="..\eShop.MobileRechargeService.Repository\eShop.MobileRechargeService.Repository.csproj" />
+  </ItemGroup>
+</Project>

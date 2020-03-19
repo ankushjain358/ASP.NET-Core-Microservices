@@ -19,10 +19,12 @@ namespace eShop.OrderService.Controllers
     public class OrderController : ControllerBase
     {
         private readonly IOrderService _orderService;
+        private readonly IMessagingQueueManager _messagingQueueManager;
 
-        public OrderController(IOrderService orderService)
+        public OrderController(IOrderService orderService, IMessagingQueueManager messagingQueueManager)
         {
             _orderService = orderService;
+            _messagingQueueManager = messagingQueueManager;
         }
 
         [HttpPost]
@@ -42,8 +44,12 @@ namespace eShop.OrderService.Controllers
         {
             request.UserId = Convert.ToInt32(User.Claims.First(item => item.Type == ClaimTypes.NameIdentifier).Value);
 
+            // 1. Create order
             RechargeOrderResponseDTO response = _orderService.CreateRechargeOrder(request);
-            //TODO: Send message in Recharge Queue
+
+            // 2. Send message in Recharge Queue
+            _messagingQueueManager.PublishMessageForMobileRecharge(response.OrderId, request.RechargeAmount, request.RechargeProviderId);
+
             return new ApiResponse<RechargeOrderResponseDTO>(response);
         }
     }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
-    <UserSecretsId>46faa87d-b5db-49a2-8d61-e43cf93a9d0b</UserSecretsId>
+    <UserSecretsId>c9daf3a9-5994-4cd6-a92e-4f6920adbcab</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,8 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\eShop.OrderService.DTO\eShop.OrderService.DTO.csproj" />
-    <ProjectReference Include="..\eShop.OrderService.Service\eShop.OrderService.Service.csproj" />
+    <ProjectReference Include="..\eShop.MobileRechargeService.DTO\eShop.MobileRechargeService.DTO.csproj" />
+    <ProjectReference Include="..\eShop.MobileRechargeService.Service\eShop.MobileRechargeService.Service.csproj" />
   </ItemGroup>
 
 </Project>

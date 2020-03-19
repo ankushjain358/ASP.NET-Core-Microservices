@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.Utilities.WebApiUtility", "eShop.Utilities.WebApiUtility\eShop.Utilities.WebApiUtility.csproj", "{DDABBC57-900C-4003-AEF0-1BC4691A5321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.Utilities.SharedDTO", "eShop.Utilities.SharedDTO\eShop.Utilities.SharedDTO.csproj", "{A96C2CA3-B1F9-4361-B6F7-8362ED3CBCCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DDABBC57-900C-4003-AEF0-1BC4691A5321}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDABBC57-900C-4003-AEF0-1BC4691A5321}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDABBC57-900C-4003-AEF0-1BC4691A5321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A96C2CA3-B1F9-4361-B6F7-8362ED3CBCCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A96C2CA3-B1F9-4361-B6F7-8362ED3CBCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A96C2CA3-B1F9-4361-B6F7-8362ED3CBCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A96C2CA3-B1F9-4361-B6F7-8362ED3CBCCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

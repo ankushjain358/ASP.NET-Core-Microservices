@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eShop.Utilities.SharedDTO;
+using System;
 using System.Collections.Generic;
 using System.Text;
 

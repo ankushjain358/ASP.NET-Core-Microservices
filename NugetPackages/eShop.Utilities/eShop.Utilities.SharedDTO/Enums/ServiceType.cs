@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShop.OrderService.DTO
+namespace eShop.Utilities.SharedDTO
 {
     public enum ServiceType
     {

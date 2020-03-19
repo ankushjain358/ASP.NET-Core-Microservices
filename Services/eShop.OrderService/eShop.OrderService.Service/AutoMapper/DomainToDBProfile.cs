@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using eShop.OrderService.DTO;
 using eShop.OrderService.Repository;
+using eShop.Utilities.SharedDTO;
 using System;
 
 namespace eShop.OrderService.Service

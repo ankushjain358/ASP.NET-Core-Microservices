@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace eShop.OrderService.DTO
+namespace eShop.Utilities.SharedDTO
 {
     public enum OrderStatus
     {

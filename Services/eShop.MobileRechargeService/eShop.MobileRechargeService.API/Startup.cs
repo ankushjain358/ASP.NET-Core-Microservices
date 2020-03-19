@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using eShop.AccountService.Repository;
-using eShop.OrderService.Repository;
-using eShop.OrderService.Service;
+using eShop.MobileRechargeService.Repository;
+using eShop.MobileRechargeService.Service;
 using eShop.Utilities.WebApiUtility;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -21,7 +20,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
-namespace eShop.OrderService
+namespace eShop.MobileRechargeService
 {
     public class Startup
     {
@@ -71,11 +70,11 @@ namespace eShop.OrderService
             services.AddCors();
 
             // 6. Add Entity Framework support
-            services.AddDbContext<eShopOrdersContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<eShopMobileRechargesContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // 7. Register interfaces for dependency injection
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<IOrderService, Service.OrderService>();
+            services.AddScoped<IMobileRechargeService, Service.MobileRechargeService>();
             services.AddScoped<IMessagingQueueManager, RabbitMQManager>();
 
             // 8. Disable Automatic Model State Validation
@@ -83,7 +82,6 @@ namespace eShop.OrderService
             {
                 options.SuppressModelStateInvalidFilter = true;
             });
-
 
             // 9. Initialize subscribers
             var serviceProvider = services.BuildServiceProvider();

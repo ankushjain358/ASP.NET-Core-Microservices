@@ -8,10 +8,10 @@ namespace eShop.AccountService.Repository
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        internal eShopAccountsContext _context;
+        internal DbContext _context;
         internal DbSet<TEntity> _dbSet;
 
-        public GenericRepository(eShopAccountsContext context)
+        public GenericRepository(DbContext context)
         {
             this._context = context;
             this._dbSet = context.Set<TEntity>();

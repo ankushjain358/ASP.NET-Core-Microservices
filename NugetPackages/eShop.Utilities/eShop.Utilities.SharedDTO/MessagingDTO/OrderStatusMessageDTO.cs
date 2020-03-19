@@ -1,13 +1,13 @@
-﻿using eShop.Utilities.SharedDTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShop.OrderService.DTO
+namespace eShop.Utilities.SharedDTO
 {
-    public class RechargeOrderResponseDTO
+    public class OrderStatusMessageDTO
     {
         public int OrderId { get; set; }
+        public int RechargeOrderId { get; set; }
         public OrderStatus OrderStatus { get; set; }
     }
 }

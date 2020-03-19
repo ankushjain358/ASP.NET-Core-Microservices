@@ -5,6 +5,7 @@ using eShop.AccountService.Repository;
 using eShop.OrderService.DTO;
 using System.Linq;
 using eShop.OrderService.Repository;
+using eShop.Utilities.SharedDTO;
 
 namespace eShop.OrderService.Service
 {
@@ -32,6 +33,17 @@ namespace eShop.OrderService.Service
         {
             List<Orders> orderList = _unitOfWork.OrderRepository.Get(item => item.UserId == userId).ToList();
             return _mapper.Map<List<OrderDTO>>(orderList);
+        }
+
+        public void UpdateOrderStatusWithExternalId(OrderStatusMessageDTO orderStatus)
+        {
+            var existingOrder = _unitOfWork.OrderRepository.Get(item => item.Id == orderStatus.OrderId).FirstOrDefault();
+            if (existingOrder != null)
+            {
+                existingOrder.StatusId = Convert.ToInt32(orderStatus.OrderStatus);
+                existingOrder.ExternalOrderId = orderStatus.RechargeOrderId;
+                _unitOfWork.SaveChanges();
+            }
         }
     }
 }
